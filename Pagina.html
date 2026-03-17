@@ -1,61 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Mejorada</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar Mejorada</title>
 
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-   
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth; /* Scroll suave */
+    }
 
-        .nav-link {
-            color: white !important;
-            font-weight: 500;
-        }
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 
-        .nav-link:hover {
-            color: #ffc107 !important;
-        }
+    .nav-link {
+        color: white !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+    }
 
-        .navbar-brand {
-            font-weight: bold;
-            color: #ffc107 !important;
-        }
-    </style>
+    .nav-link.active {
+        color: #ffc107 !important; /* Amarillo cuando está activo */
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        color: white !important;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .card-img-top {
+        height: 250px; 
+        object-fit: cover;
+    }
+
+    #experiencias_extremas, #nosotros, #contacto {
+        scroll-margin-top: 70px;
+    }
+
+    /* Estilo del formulario */
+    .form-control {
+        margin-bottom: 1rem;
+    }
+</style>
 </head>
 <body>
-<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark"> 
-    <div class="container"> 
-            <div class="offcanvas-body"> 
-                <ul class="navbar-nav flex-grow-1 justify-content-between"> 
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
-                    </li> 
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
-                    </li> 
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Experiencias</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contactanos</a>
-                    </li> 
-
-                </ul> 
-            </div> 
-        </div> 
-    </div> 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Experiencias</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto justify-content-center w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contáctanos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
+
+<!-- Sección Experiencias Extremas -->
+<div id="experiencias_extremas" class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>BIENVENIDO A NUESTRA PAGINA DE EXPERIENCIAS EXTREMAS</h1>
+            <p>Descubre la emoción y la adrenalina con nuestras experiencias únicas. Desde paracaidismo hasta rafting, tenemos algo para cada amante de la aventura.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="adre.jpg" class="img-fluid" alt="Experiencia Extrema">
+        </div>
+    </div>
+</div>
+
+<!-- Sección Nosotros -->
+<div id="nosotros" class="container mt-5">
+    <h2>Nosotros</h2>
+    <p>
+        Con más de 10 años de experiencia en actividades extremas y de aventura, nuestro equipo se dedica a ofrecer emociones únicas
+        garantizando la máxima seguridad y confiabilidad. Todos nuestros instructores están certificados y nuestros equipos cumplen con
+        estrictos estándares internacionales. Nos enfocamos en crear experiencias memorables donde la adrenalina se combina con la seguridad,
+        para que cada participante disfrute al máximo sin preocupaciones. La satisfacción de nuestros clientes y la protección de su bienestar
+        son nuestra prioridad.
+    </p>
+</div>
+
+<!-- Sección de cards (Experiencias) -->
+<div class="container mt-4">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <img src="seg.jpg" class="card-img-top" alt="Paracaidismo">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">PARACAIDISMO</h5>
+                    <p class="card-text">Vive la experiencia de volar y sentir la libertad en su máxima expresión con nuestro paracaidismo de clase mundial.</p>
+                    <!-- Botón dirige a Contacto -->
+                    <a href="#contacto" class="btn btn-primary mt-auto">Saber más <i class="bi bi-pin-map-fill"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100">
+                <img src="raf.jpg" class="card-img-top" alt="Rafting">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">RAFTING</h5>
+                    <p class="card-text">Siente la adrenalina recorriendo rápidos y olas con seguridad y diversión asegurada en nuestro rafting extremo.</p>
+                    <a href="#contacto" class="btn btn-primary mt-auto">Saber más <i class="bi bi-pin-map-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección Contacto con formulario -->
+<div id="contacto" class="container mt-5 mb-5">
+    <h2>Contáctanos</h2>
+    <form>
+        <input type="text" class="form-control" placeholder="Nombre" required>
+        <input type="email" class="form-control" placeholder="Correo electrónico" required>
+        <input type="tel" class="form-control" placeholder="Teléfono" required>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
