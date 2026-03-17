@@ -12,47 +12,43 @@
     body {
         font-family: Arial, sans-serif;
         scroll-behavior: smooth;
+        background-color: rgb(141, 239, 239);
     }
-
     .navbar {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
-
     .nav-link {
         color: white !important;
         font-weight: 500;
         padding: 0.5rem 1rem;
     }
-
     .nav-link.active {
         color: #ffc107 !important;
     }
-
     .navbar-brand {
         font-weight: bold;
         color: white !important;
     }
-
     h1, h2 {
         color: #333;
     }
-
     p {
         text-align: justify;
     }
-
     .card-img-top {
         height: 250px; 
         object-fit: cover;
     }
-
     #experiencias_extremas, #nosotros, #contacto {
         scroll-margin-top: 70px;
     }
-
     .form-control {
         margin-bottom: 1rem;
+    }
+    #paraca, #raf {
+    background-color: #fffbbd; 
+    border: 3px solid white;
     }
 </style>
 </head>
@@ -103,23 +99,23 @@
 <div class="container mt-4">
     <div class="row g-3">
         <div class="col-md-6">
-            <div class="card h-100">
+            <div id="paraca" class="card h-100">
                 <img src="seg.jpg" class="card-img-top" alt="Paracaidismo">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">PARACAIDISMO</h5>
                     <p class="card-text">Vive la experiencia de volar y sentir la libertad en su máxima expresión con nuestro paracaidismo de clase mundial.</p>
              
-                    <a href="#contacto" class="btn btn-primary mt-auto">Saber más <i class="bi bi-pin-map-fill"></i></a>
+                    <a href="#footer" class="btn btn-primary mt-auto">Saber más <i class="bi bi-pin-map-fill"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card h-100">
+            <div id="raf" class="card h-100">
                 <img src="raf.jpg" class="card-img-top" alt="Rafting">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">RAFTING</h5>
                     <p class="card-text">Siente la adrenalina recorriendo rápidos y olas con seguridad y diversión asegurada en nuestro rafting extremo.</p>
-                    <a href="#contacto" class="btn btn-primary mt-auto">Saber más <i class="bi bi-pin-map-fill"></i></a>
+                    <a href="#footer" class="btn btn-primary mt-auto">Saber más <i class="bi bi-pin-map-fill"></i></a>
                 </div>
             </div>
         </div>
@@ -136,7 +132,7 @@
     </form>
 </div>
 
-<footer class="bg-dark text-white py-4 mt-5">
+<footer id="footer" class="bg-dark text-white py-4 mt-5">
     <div class="container text-center">
         <h5>Síguenos en nuestras redes sociales</h5>
         <div class="d-flex justify-content-center mt-3 gap-3">
